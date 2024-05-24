@@ -12,10 +12,10 @@ mutable struct MyPuzzleRecordModel
     len::Int64 
 
     #constructor 
-    MyPuzzleRecordModel() = new();
+    #MyPuzzleRecordModel() = new();
 
     #Another way
-    #MyPuzzleRecordModel(record::string) = new(record, collect(record), length(record));
+    MyPuzzleRecordModel(record::String) = new(record, collect(record), length(record));
     #built in method; positional argument map to the data you listed in order 
-
+    #collect() creates an array of objects 
 end
